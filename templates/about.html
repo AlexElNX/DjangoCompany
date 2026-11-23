@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}About — Vanguard Systems{% endblock %}
+
+{% block content %}
+<div class="mb-4">
+    <div class="section-kicker mb-1">Who We Are</div>
+    <h1 class="h2 fw-bold">About Vanguard Systems</h1>
+</div>
+
+<div class="ruby-card p-4 p-md-5 mb-4">
+    <h2 class="h4 fw-semibold mb-3">Precision over bloat</h2>
+    <p class="text-secondary mb-3">
+        Founded in 2019, Vanguard Systems designs fast, maintainable backend services and internal platforms.
+        We focus on clean architecture, predictable behavior under load, and practical engineering without unnecessary complexity.
+    </p>
+    <p class="text-secondary mb-0">
+        Every service we ship is built to be observable, testable, and easy to evolve alongside real business requirements.
+    </p>
+</div>
+
+<div class="row g-4 text-center">
+    <div class="col-sm-4">
+        <div class="ruby-card p-4">
+            <div class="display-6 fw-bold" style="color: #fb7185;">99.98%</div>
+            <div class="text-secondary small mt-1">Target Service Uptime</div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="ruby-card p-4">
+            <div class="display-6 fw-bold" style="color: #fb7185;">2019</div>
+            <div class="text-secondary small mt-1">Year Founded</div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="ruby-card p-4">
+            <div class="display-6 fw-bold" style="color: #fb7185;">45+</div>
+            <div class="text-secondary small mt-1">Engineers & Specialists</div>
+        </div>
+    </div>
+</div>
+{% endblock %}

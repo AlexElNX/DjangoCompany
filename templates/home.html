@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Home — Vanguard Systems{% endblock %}
+
+{% block content %}
+<section class="ruby-card p-4 p-md-5 mb-5">
+    <div class="section-kicker mb-2">Company Overview</div>
+    <h1 class="display-5 fw-bold mb-3">High-load software and resilient infrastructure.</h1>
+    <p class="text-secondary fs-5 mb-4" style="max-width: 44rem;">
+        Vanguard Systems builds backend platforms, distributed services, and reliable developer tooling
+        for teams that cannot afford downtime.
+    </p>
+    <div class="d-flex flex-wrap gap-3">
+        <a href="{% url 'news' %}" class="btn btn-ruby px-4 py-2">Latest News</a>
+        <a href="{% url 'about' %}" class="btn btn-outline-ruby px-4 py-2">About Us</a>
+    </div>
+</section>
+
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="ruby-card p-4 h-100">
+            <span class="badge badge-ruby mb-3">News</span>
+            <h2 class="h5 fw-semibold">Releases & Updates</h2>
+            <p class="text-secondary small mb-3">
+                Platform milestones, architecture notes, and company announcements.
+            </p>
+            <a href="{% url 'news' %}" class="text-decoration-none fw-medium" style="color: #fb7185;">Explore news →</a>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="ruby-card p-4 h-100">
+            <span class="badge badge-ruby mb-3">Leadership</span>
+            <h2 class="h5 fw-semibold">Management Team</h2>
+            <p class="text-secondary small mb-3">
+                Meet the engineering and operations leaders steering product direction.
+            </p>
+            <a href="{% url 'management' %}" class="text-decoration-none fw-medium" style="color: #fb7185;">View leadership →</a>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="ruby-card p-4 h-100">
+            <span class="badge badge-ruby mb-3">Connect</span>
+            <h2 class="h5 fw-semibold">Offices & Contacts</h2>
+            <p class="text-secondary small mb-3">
+                Reach out for partnerships, enterprise inquiries, or engineering roles.
+            </p>
+            <a href="{% url 'contacts' %}" class="text-decoration-none fw-medium" style="color: #fb7185;">Get in touch →</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
