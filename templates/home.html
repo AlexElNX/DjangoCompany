@@ -3,8 +3,47 @@
 {% block title %}Home — Vanguard Systems{% endblock %}
 
 {% block content %}
-<section class="ruby-card p-4 p-md-5 mb-5">
-    <div class="section-kicker mb-2">Company Overview</div>
+<style>
+    .hero-ruby {
+        background:
+            radial-gradient(circle at top right, rgba(225, 29, 72, 0.16), transparent 45%),
+            #11151f;
+    }
+    .status-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        padding: 0.25rem 0.7rem;
+        border-radius: 999px;
+        background: rgba(251, 113, 133, 0.12);
+        border: 1px solid rgba(251, 113, 133, 0.35);
+        color: #fda4af;
+        font-size: 0.8rem;
+    }
+    .status-dot {
+        width: 0.45rem;
+        height: 0.45rem;
+        border-radius: 50%;
+        background: #fb7185;
+    }
+    .pulse-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding-bottom: 0.75rem;
+    }
+    .pulse-item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+</style>
+
+<section class="ruby-card hero-ruby p-4 p-md-5 mb-4">
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+        <div class="section-kicker mb-0">Company Overview</div>
+        <span class="status-pill">
+            <span class="status-dot"></span>
+            All Core Systems Operational
+        </span>
+    </div>
     <h1 class="display-5 fw-bold mb-3">High-load software and resilient infrastructure.</h1>
     <p class="text-secondary fs-5 mb-4" style="max-width: 44rem;">
         Vanguard Systems builds backend platforms, distributed services, and reliable developer tooling
@@ -16,34 +55,70 @@
     </div>
 </section>
 
+<div class="ruby-card p-4 mb-4">
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+        <div class="fw-semibold">Radar Highlights</div>
+        <a href="{% url 'news' %}" class="text-decoration-none small fw-medium" style="color: #fb7185;">All 10 updates →</a>
+    </div>
+    <div class="row g-3">
+        <div class="col-md-4">
+            <div class="pulse-item h-100">
+                <div class="small" style="color: #fb7185;">Nov 19, 2026 · Gaming</div>
+                <div class="fw-semibold">Grand Theft Auto VI Worldwide Launch</div>
+                <div class="text-secondary small">Open-world milestone hitting PS5 and Xbox Series X|S.</div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="pulse-item h-100">
+                <div class="small" style="color: #fb7185;">Jun 21, 2026 · Series</div>
+                <div class="fw-semibold">House of the Dragon Season 3</div>
+                <div class="text-secondary small">Targaryen civil war escalates on HBO.</div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="pulse-item h-100">
+                <div class="small" style="color: #fb7185;">Apr 13, 2026 · Gaming</div>
+                <div class="fw-semibold">Metro 2039 Officially Announced</div>
+                <div class="text-secondary small">4A Games unveils the next chapter after Metro Exodus.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="row g-4">
     <div class="col-md-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">News</span>
-            <h2 class="h5 fw-semibold">Releases & Updates</h2>
-            <p class="text-secondary small mb-3">
-                Platform milestones, architecture notes, and company announcements.
-            </p>
+        <div class="ruby-card p-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+                <span class="badge badge-ruby mb-3">News · 10 Items</span>
+                <h2 class="h5 fw-semibold">Releases & Updates</h2>
+                <p class="text-secondary small mb-3">
+                    Major releases, announcements, and key dates across tech, gaming, cinema, and series.
+                </p>
+            </div>
             <a href="{% url 'news' %}" class="text-decoration-none fw-medium" style="color: #fb7185;">Explore news →</a>
         </div>
     </div>
     <div class="col-md-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Leadership</span>
-            <h2 class="h5 fw-semibold">Management Team</h2>
-            <p class="text-secondary small mb-3">
-                Meet the engineering and operations leaders steering product direction.
-            </p>
+        <div class="ruby-card p-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+                <span class="badge badge-ruby mb-3">Leadership · 50 Roster</span>
+                <h2 class="h5 fw-semibold">Management Team</h2>
+                <p class="text-secondary small mb-3">
+                    Executive board and specialists steering architecture, security, and delivery.
+                </p>
+            </div>
             <a href="{% url 'management' %}" class="text-decoration-none fw-medium" style="color: #fb7185;">View leadership →</a>
         </div>
     </div>
     <div class="col-md-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Connect</span>
-            <h2 class="h5 fw-semibold">Offices & Contacts</h2>
-            <p class="text-secondary small mb-3">
-                Reach out for partnerships, enterprise inquiries, or engineering roles.
-            </p>
+        <div class="ruby-card p-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+                <span class="badge badge-ruby mb-3">Global · US · CA · AU</span>
+                <h2 class="h5 fw-semibold">Offices & Contacts</h2>
+                <p class="text-secondary small mb-3">
+                    Connect with regional branches or send a direct message to the team.
+                </p>
+            </div>
             <a href="{% url 'contacts' %}" class="text-decoration-none fw-medium" style="color: #fb7185;">Get in touch →</a>
         </div>
     </div>

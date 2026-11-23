@@ -3,6 +3,39 @@
 {% block title %}About — Vanguard Systems{% endblock %}
 
 {% block content %}
+<style>
+    .principle-item {
+        border-left: 3px solid #e11d48;
+        padding-left: 1rem;
+    }
+    .domain-chip {
+        display: inline-block;
+        padding: 0.35rem 0.75rem;
+        border-radius: 999px;
+        background: rgba(225, 29, 72, 0.12);
+        border: 1px solid rgba(251, 113, 133, 0.35);
+        color: #fda4af;
+        font-size: 0.85rem;
+        font-weight: 500;
+    }
+    .timeline-row {
+        border-left: 2px solid rgba(251, 113, 133, 0.4);
+        margin-left: 0.5rem;
+        padding-left: 1.5rem;
+        position: relative;
+    }
+    .timeline-dot {
+        position: absolute;
+        left: -0.45rem;
+        top: 0.35rem;
+        width: 0.75rem;
+        height: 0.75rem;
+        border-radius: 50%;
+        background: #fb7185;
+        box-shadow: 0 0 10px rgba(251, 113, 133, 0.7);
+    }
+</style>
+
 <div class="mb-4">
     <div class="section-kicker mb-1">Who We Are</div>
     <h1 class="h2 fw-bold">About Vanguard Systems</h1>
@@ -14,28 +47,87 @@
         Founded in 2019, Vanguard Systems designs fast, maintainable backend services and internal platforms.
         We focus on clean architecture, predictable behavior under load, and practical engineering without unnecessary complexity.
     </p>
-    <p class="text-secondary mb-0">
+    <p class="text-secondary mb-4">
         Every service we ship is built to be observable, testable, and easy to evolve alongside real business requirements.
     </p>
+    <div class="d-flex flex-wrap gap-2">
+        <span class="domain-chip">Distributed Systems</span>
+        <span class="domain-chip">High-Load APIs</span>
+        <span class="domain-chip">Observability & SRE</span>
+        <span class="domain-chip">DevSecOps</span>
+        <span class="domain-chip">Edge Infrastructure</span>
+    </div>
 </div>
 
-<div class="row g-4 text-center">
+<div class="row g-4 text-center mb-4">
     <div class="col-sm-4">
-        <div class="ruby-card p-4">
+        <div class="ruby-card p-4 h-100">
             <div class="display-6 fw-bold" style="color: #fb7185;">99.98%</div>
             <div class="text-secondary small mt-1">Target Service Uptime</div>
         </div>
     </div>
     <div class="col-sm-4">
-        <div class="ruby-card p-4">
+        <div class="ruby-card p-4 h-100">
             <div class="display-6 fw-bold" style="color: #fb7185;">2019</div>
             <div class="text-secondary small mt-1">Year Founded</div>
         </div>
     </div>
     <div class="col-sm-4">
-        <div class="ruby-card p-4">
-            <div class="display-6 fw-bold" style="color: #fb7185;">45+</div>
+        <div class="ruby-card p-4 h-100">
+            <div class="display-6 fw-bold" style="color: #fb7185;">50</div>
             <div class="text-secondary small mt-1">Engineers & Specialists</div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4 mb-4">
+    <div class="col-lg-6">
+        <div class="ruby-card p-4 h-100">
+            <h2 class="h5 fw-semibold mb-3">Engineering Principles</h2>
+            <div class="d-flex flex-column gap-3">
+                <div class="principle-item">
+                    <div class="fw-semibold">Zero-Downtime First</div>
+                    <div class="text-secondary small">Safe rollouts, backward-compatible schemas, and automated fallback paths.</div>
+                </div>
+                <div class="principle-item">
+                    <div class="fw-semibold">Deterministic Pipelines</div>
+                    <div class="text-secondary small">Reproducible builds, clear metrics, and predictable latency under spikes.</div>
+                </div>
+                <div class="principle-item">
+                    <div class="fw-semibold">Blameless Post-Mortems</div>
+                    <div class="text-secondary small">Root-cause focus over finger-pointing so every incident hardens the system.</div>
+                </div>
+                <div class="principle-item">
+                    <div class="fw-semibold">Security by Default</div>
+                    <div class="text-secondary small">Least-privilege access, encrypted channels, and continuous audit checks.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="ruby-card p-4 h-100">
+            <h2 class="h5 fw-semibold mb-3">Milestones</h2>
+            <div class="d-flex flex-column gap-3">
+                <div class="timeline-row">
+                    <span class="timeline-dot"></span>
+                    <div class="small fw-semibold" style="color: #fb7185;">2019</div>
+                    <div class="fw-medium">Core Platform Launch</div>
+                    <div class="text-secondary small">Started with internal service tooling and high-reliability API gateways.</div>
+                </div>
+                <div class="timeline-row">
+                    <span class="timeline-dot"></span>
+                    <div class="small fw-semibold" style="color: #fb7185;">2022</div>
+                    <div class="fw-medium">Multi-Region Expansion</div>
+                    <div class="text-secondary small">Scaled edge routing and regional hubs across North America and partner markets.</div>
+                </div>
+                <div class="timeline-row">
+                    <span class="timeline-dot"></span>
+                    <div class="small fw-semibold" style="color: #fb7185;">2026</div>
+                    <div class="fw-medium">50-Strong Guild & Next-Gen Stack</div>
+                    <div class="text-secondary small">Expanded leadership, chaos-testing automation, and regional office branches.</div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

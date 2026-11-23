@@ -14,3 +14,13 @@ def about(request, _=None):
 
 def contacts(request, _=None):
     return render(request, "contacts.html")
+
+
+def contacts_us(request, _=None):
+    return render(request, "contacts.html", {"country": "United States"})
+
+def contacts_ca(request, _=None):
+    return render(request, "contacts.html", {"country": "Canada"})
+
+def contacts_au(request, _=None):
+    return render(request, "contacts.html", {"country": "Australia"})
