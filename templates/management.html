@@ -3,471 +3,554 @@
 {% block title %}Management & Team — Vanguard Systems{% endblock %}
 
 {% block content %}
-<div class="mb-4">
-    <div class="section-kicker mb-1">Leadership & Roster</div>
-    <h1 class="h2 fw-bold">Company Management & Core Team (50)</h1>
-    <p class="text-secondary mb-0">Executive leadership, directors, and engineering specialists driving Vanguard Systems.</p>
-</div>
+    <div class="mb-4">
+        <div class="section-kicker mb-1">Leadership & Roster</div>
+        <h1 class="h2 fw-bold">Company Management & Core Team (50)</h1>
+        <p class="text-secondary mb-0">Executive leadership, directors, and engineering specialists driving Vanguard
+            Systems.</p>
+    </div>
 
-<div class="mb-3">
-    <h2 class="h5 fw-semibold text-uppercase text-secondary mb-3">Executive Board & Senior Leadership</h2>
-</div>
+    <div class="d-flex flex-wrap gap-2 mb-4" id="roster-subnav">
+        <button type="button" class="btn btn-sm btn-ruby" data-roster="all">All (50)</button>
+        <button type="button" class="btn btn-sm btn-outline-ruby" data-roster="exec">Executive Board (18)</button>
+        <button type="button" class="btn btn-sm btn-outline-ruby" data-roster="division">Engineering & Ops (32)</button>
+    </div>
 
-<div class="row g-4 mb-5">
-    <!-- 1 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Chief Executive Officer</span>
-            <h3 class="h5 fw-semibold">Jon Snow</h3>
-            <p class="text-secondary small mb-0">Leads global strategy, crisis resilience, and cross-division alignment across all engineering regions.</p>
+    <div id="roster-exec">
+        <div class="mb-3">
+            <h2 class="h5 fw-semibold text-uppercase text-secondary mb-3">Executive Board & Senior Leadership</h2>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <!-- 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Chief Executive Officer</span>
+                    <h3 class="h5 fw-semibold">Jon Snow</h3>
+                    <p class="text-secondary small mb-0">Leads global strategy, crisis resilience, and cross-division
+                        alignment across all engineering regions.</p>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Chairwoman & Co-CEO</span>
+                    <h3 class="h5 fw-semibold">Daenerys Targaryen</h3>
+                    <p class="text-secondary small mb-0">Drives aggressive market expansion, global infrastructure
+                        scaling, and flagship platform launches.</p>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Chief Operating Officer</span>
+                    <h3 class="h5 fw-semibold">Tyrion Lannister</h3>
+                    <p class="text-secondary small mb-0">Architects operational diplomacy, enterprise partnerships, and
+                        resource allocation under tight deadlines.</p>
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Chief Financial Officer</span>
+                    <h3 class="h5 fw-semibold">Tywin Lannister</h3>
+                    <p class="text-secondary small mb-0">Oversees capital discipline, long-term M&A strategy, and
+                        corporate governance.</p>
+                </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">VP of Corporate Strategy</span>
+                    <h3 class="h5 fw-semibold">Cersei Lannister</h3>
+                    <p class="text-secondary small mb-0">Directs competitive positioning, executive board relations, and
+                        high-stakes enterprise negotiations.</p>
+                </div>
+            </div>
+
+            <!-- 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Chief Security Officer</span>
+                    <h3 class="h5 fw-semibold">Jaime Lannister</h3>
+                    <p class="text-secondary small mb-0">Commands physical and perimeter security operations, executive
+                        protection, and rapid incident response.</p>
+                </div>
+            </div>
+
+            <!-- 7 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Chief Ethics & Governance Officer</span>
+                    <h3 class="h5 fw-semibold">Eddard Stark</h3>
+                    <p class="text-secondary small mb-0">Enforces strict compliance standards, internal accountability,
+                        and zero-compromise audit integrity.</p>
+                </div>
+            </div>
+
+            <!-- 8 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Chief Technology & Research Officer</span>
+                    <h3 class="h5 fw-semibold">Samwell Tarly</h3>
+                    <p class="text-secondary small mb-0">Heads R&D knowledge bases, archival data systems, and technical
+                        documentation standards.</p>
+                </div>
+            </div>
+
+            <!-- 9 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">VP of Infrastructure Defense</span>
+                    <h3 class="h5 fw-semibold">Barristan Selmy</h3>
+                    <p class="text-secondary small mb-0">Mentors senior security engineers and maintains veteran
+                        operational reliability across core clusters.</p>
+                </div>
+            </div>
+
+            <!-- 10 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Director of Site Reliability</span>
+                    <h3 class="h5 fw-semibold">Sandor Clegane</h3>
+                    <p class="text-secondary small mb-0">Eliminates production bottlenecks and keeps mission-critical
+                        servers alive under extreme load.</p>
+                </div>
+            </div>
+
+            <!-- 11 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">VP of Threat Intelligence</span>
+                    <h3 class="h5 fw-semibold">Varys</h3>
+                    <p class="text-secondary small mb-0">Manages global telemetry networks, early-warning risk
+                        detection, and external market intelligence.</p>
+                </div>
+            </div>
+
+            <!-- 12 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">VP of Business Development</span>
+                    <h3 class="h5 fw-semibold">Petyr Baelish</h3>
+                    <p class="text-secondary small mb-0">Structures complex commercial deals, strategic alliances, and
+                        high-margin revenue channels.</p>
+                </div>
+            </div>
+
+            <!-- 13 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">VP of Penetration Testing</span>
+                    <h3 class="h5 fw-semibold">Arya Stark</h3>
+                    <p class="text-secondary small mb-0">Leads red-team offensive security audits and zero-day
+                        vulnerability hunting across internal APIs.</p>
+                </div>
+            </div>
+
+            <!-- 14 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">VP of Regional Operations</span>
+                    <h3 class="h5 fw-semibold">Sansa Stark</h3>
+                    <p class="text-secondary small mb-0">Oversees regional office logistics, supply chain continuity,
+                        and stakeholder coordination.</p>
+                </div>
+            </div>
+
+            <!-- 15 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">VP of Global Delivery</span>
+                    <h3 class="h5 fw-semibold">Jorah Mormont</h3>
+                    <p class="text-secondary small mb-0">Coordinates international client deployments and cross-border
+                        engineering field teams.</p>
+                </div>
+            </div>
+
+            <!-- 16 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Director of Strategic Analytics</span>
+                    <h3 class="h5 fw-semibold">Davos Seaworth</h3>
+                    <p class="text-secondary small mb-0">Provides pragmatic operational forecasting, logistics routing,
+                        and candid executive advisory.</p>
+                </div>
+            </div>
+
+            <!-- 17 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Director of Field Engineering</span>
+                    <h3 class="h5 fw-semibold">Brienne of Tarth</h3>
+                    <p class="text-secondary small mb-0">Ensures SLA commitments are fulfilled to the letter across
+                        high-priority enterprise accounts.</p>
+                </div>
+            </div>
+
+            <!-- 18 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Director of Compliance & Risk</span>
+                    <h3 class="h5 fw-semibold">Stannis Baratheon</h3>
+                    <p class="text-secondary small mb-0">Enforces strict regulatory adherence, release checklists, and
+                        zero-tolerance policy audits.</p>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- 2 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Chairwoman & Co-CEO</span>
-            <h3 class="h5 fw-semibold">Daenerys Targaryen</h3>
-            <p class="text-secondary small mb-0">Drives aggressive market expansion, global infrastructure scaling, and flagship platform launches.</p>
+
+    <div id="roster-division">
+        <div class="mb-3">
+            <h2 class="h5 fw-semibold text-uppercase text-secondary mb-3">Engineering, Product, Legal & Operations
+                Division</h2>
+        </div>
+
+        <div class="row g-4">
+            <!-- 19 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Principal Systems Chemist & Architect</span>
+                    <h3 class="h5 fw-semibold">Walter White</h3>
+                    <p class="text-secondary small mb-0">Designs ultra-pure, 99.1% deterministic data processing
+                        pipelines and core algorithms.</p>
+                </div>
+            </div>
+
+            <!-- 20 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">General Counsel</span>
+                    <h3 class="h5 fw-semibold">Saul Goodman</h3>
+                    <p class="text-secondary small mb-0">Handles creative contract structuring, regulatory loopholes,
+                        and rapid dispute resolution.</p>
+                </div>
+            </div>
+
+            <!-- 21 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Head of Corporate Security</span>
+                    <h3 class="h5 fw-semibold">Mike Ehrmantraut</h3>
+                    <p class="text-secondary small mb-0">Runs background vetting, operational cleanups, and no-nonsense
+                        risk mitigation.</p>
+                </div>
+            </div>
+
+            <!-- 22 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Director of Supply Chain</span>
+                    <h3 class="h5 fw-semibold">Gustavo Fring</h3>
+                    <p class="text-secondary small mb-0">Maintains spotless distribution logistics, vendor discipline,
+                        and seamless operational cover.</p>
+                </div>
+            </div>
+
+            <!-- 23 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Lead Root-Cause Investigator</span>
+                    <h3 class="h5 fw-semibold">Sherlock Holmes</h3>
+                    <p class="text-secondary small mb-0">Solves impossible production bugs and distributed system
+                        anomalies from minimal log traces.</p>
+                </div>
+            </div>
+
+            <!-- 24 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Technical Incident Coordinator</span>
+                    <h3 class="h5 fw-semibold">John Watson</h3>
+                    <p class="text-secondary small mb-0">Documents post-mortems, coordinates emergency war rooms, and
+                        keeps diagnostics grounded.</p>
+                </div>
+            </div>
+
+            <!-- 25 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Head of Acquisitions & Expansion</span>
+                    <h3 class="h5 fw-semibold">Thomas Shelby</h3>
+                    <p class="text-secondary small mb-0">Executes high-stakes expansion plans, strategic takeovers, and
+                        long-horizon market moves.</p>
+                </div>
+            </div>
+
+            <!-- 26 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Lead Diagnostics Architect</span>
+                    <h3 class="h5 fw-semibold">Gregory House</h3>
+                    <p class="text-secondary small mb-0">Diagnoses rare multi-service failures when standard monitoring
+                        insists everything is fine.</p>
+                </div>
+            </div>
+
+            <!-- 27 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Principal Cybersecurity Engineer</span>
+                    <h3 class="h5 fw-semibold">Elliot Alderson</h3>
+                    <p class="text-secondary small mb-0">Hardens kernel security, audits encryption layers, and monitors
+                        network intrusion vectors.</p>
+                </div>
+            </div>
+
+            <!-- 28 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Senior Distributed Systems Theorist</span>
+                    <h3 class="h5 fw-semibold">Sheldon Cooper</h3>
+                    <p class="text-secondary small mb-0">Optimizes theoretical throughput, formal specifications, and
+                        strict engineering protocols.</p>
+                </div>
+            </div>
+
+            <!-- 29 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Regional Branch Manager</span>
+                    <h3 class="h5 fw-semibold">Michael Scott</h3>
+                    <p class="text-secondary small mb-0">Boosts team morale through unorthodox all-hands meetings and
+                        relentless client enthusiasm.</p>
+                </div>
+            </div>
+
+            <!-- 30 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Assistant to the Regional Manager</span>
+                    <h3 class="h5 fw-semibold">Dwight Schrute</h3>
+                    <p class="text-secondary small mb-0">Enforces office readiness drills, asset tracking, and maximum
+                        productivity quotas.</p>
+                </div>
+            </div>
+
+            <!-- 31 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Enterprise Account Strategist</span>
+                    <h3 class="h5 fw-semibold">Harvey Specter</h3>
+                    <p class="text-secondary small mb-0">Closes flagship enterprise contracts before competitors even
+                        schedule discovery calls.</p>
+                </div>
+            </div>
+
+            <!-- 32 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Principal Documentation & IP Analyst</span>
+                    <h3 class="h5 fw-semibold">Mike Ross</h3>
+                    <p class="text-secondary small mb-0">Retains complete recall of every API spec, patent filing, and
+                        legacy codebase commit.</p>
+                </div>
+            </div>
+
+            <!-- 33 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Director of Executive Operations</span>
+                    <h3 class="h5 fw-semibold">Tony Soprano</h3>
+                    <p class="text-secondary small mb-0">Resolves vendor bottlenecks and keeps regional waste-management
+                        infrastructure running smoothly.</p>
+                </div>
+            </div>
+
+            <!-- 34 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Senior Forensic Data Analyst</span>
+                    <h3 class="h5 fw-semibold">Dexter Morgan</h3>
+                    <p class="text-secondary small mb-0">Isolates corrupted data records and traces anomalous patterns
+                        with surgical precision.</p>
+                </div>
+            </div>
+
+            <!-- 35 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Senior Legacy Incident Specialist</span>
+                    <h3 class="h5 fw-semibold">Geralt of Rivia</h3>
+                    <p class="text-secondary small mb-0">Hunts down monstrous legacy monolith bugs that standard
+                        engineering teams refuse to touch.</p>
+                </div>
+            </div>
+
+            <!-- 36 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Principal AI & Magic-Systems Engineer</span>
+                    <h3 class="h5 fw-semibold">Yennefer of Vengerberg</h3>
+                    <p class="text-secondary small mb-0">Builds high-output inference pipelines and transforms raw
+                        compute into production capabilities.</p>
+                </div>
+            </div>
+
+            <!-- 37 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Lead Edge Deployment Specialist</span>
+                    <h3 class="h5 fw-semibold">Din Djarin</h3>
+                    <p class="text-secondary small mb-0">Delivers mission-critical hardware nodes to remote environments
+                        with zero deviation from protocol.</p>
+                </div>
+            </div>
+
+            <!-- 38 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Senior Systems & Hardware Engineer</span>
+                    <h3 class="h5 fw-semibold">Tony Stark</h3>
+                    <p class="text-secondary small mb-0">Prototypes custom silicon accelerators, autonomous defense
+                        tooling, and next-gen UIs.</p>
+                </div>
+            </div>
+
+            <!-- 39 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Director of Counter-Threat Ops</span>
+                    <h3 class="h5 fw-semibold">Billy Butcher</h3>
+                    <p class="text-secondary small mb-0">Audits over-privileged internal services and keeps rogue
+                        subsystems in check.</p>
+                </div>
+            </div>
+
+            <!-- 40 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Principal Quantitative Analyst</span>
+                    <h3 class="h5 fw-semibold">Chandler Bing</h3>
+                    <p class="text-secondary small mb-0">Manages statistical reconfiguration and data-driven business
+                        metrics across quarterly reports.</p>
+                </div>
+            </div>
+
+            <!-- 41 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Head of Media & Board Relations</span>
+                    <h3 class="h5 fw-semibold">Logan Roy</h3>
+                    <p class="text-secondary small mb-0">Steers high-level media conglomerates, investor narratives, and
+                        decisive executive pivots.</p>
+                </div>
+            </div>
+
+            <!-- 42 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Lead Data Telemetry Investigator</span>
+                    <h3 class="h5 fw-semibold">Fox Mulder</h3>
+                    <p class="text-secondary small mb-0">Investigates unexplained network traffic spikes and edge-case
+                        anomalies hidden in deep logs.</p>
+                </div>
+            </div>
+
+            <!-- 43 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Principal Validation & QA Lead</span>
+                    <h3 class="h5 fw-semibold">Dana Scully</h3>
+                    <p class="text-secondary small mb-0">Applies rigorous scientific verification and reproducible
+                        benchmarking to every release.</p>
+                </div>
+            </div>
+
+            <!-- 44 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Senior Full-Stack Engineer</span>
+                    <h3 class="h5 fw-semibold">Jesse Pinkman</h3>
+                    <p class="text-secondary small mb-0">Scales high-throughput execution pipelines and ships rapid
+                        frontend prototypes on demand.</p>
+                </div>
+            </div>
+
+            <!-- 45 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Lead Product Operations Manager</span>
+                    <h3 class="h5 fw-semibold">Kim Wexler</h3>
+                    <p class="text-secondary small mb-0">Aligns product delivery milestones, compliance reviews, and
+                        cross-functional execution.</p>
+                </div>
+            </div>
+
+            <!-- 46 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Director of Field Resilience</span>
+                    <h3 class="h5 fw-semibold">Joel Miller</h3>
+                    <p class="text-secondary small mb-0">Maintains critical infrastructure under harsh conditions and
+                        leads disaster-recovery migrations.</p>
+                </div>
+            </div>
+
+            <!-- 47 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Senior Frontend & Product Designer</span>
+                    <h3 class="h5 fw-semibold">Wednesday Addams</h3>
+                    <p class="text-secondary small mb-0">Crafts dark-mode user interfaces, sharp typography, and
+                        zero-fluff user experiences.</p>
+                </div>
+            </div>
+
+            <!-- 48 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">VP of People & Team Culture</span>
+                    <h3 class="h5 fw-semibold">Ted Lasso</h3>
+                    <p class="text-secondary small mb-0">Builds high-trust engineering teams, onboarding mentorship, and
+                        resilient team morale.</p>
+                </div>
+            </div>
+
+            <!-- 49 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Principal Anomaly & Chaos Engineer</span>
+                    <h3 class="h5 fw-semibold">Eleven</h3>
+                    <p class="text-secondary small mb-0">Stress-tests cross-dimension network boundaries and isolates
+                        catastrophic memory leaks.</p>
+                </div>
+            </div>
+
+            <!-- 50 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="ruby-card p-4 h-100">
+                    <span class="badge badge-ruby mb-3">Director of Global Expansion</span>
+                    <h3 class="h5 fw-semibold">Ragnar Lothbrok</h3>
+                    <p class="text-secondary small mb-0">Pioneers uncharted cloud regions and leads high-velocity
+                        engineering expeditions.</p>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- 3 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Chief Operating Officer</span>
-            <h3 class="h5 fw-semibold">Tyrion Lannister</h3>
-            <p class="text-secondary small mb-0">Architects operational diplomacy, enterprise partnerships, and resource allocation under tight deadlines.</p>
-        </div>
-    </div>
+    <script>
+    document.querySelectorAll('#roster-subnav button').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const target = btn.dataset.roster;
+            document.querySelectorAll('#roster-subnav button').forEach((b) => {
+                b.classList.remove('btn-ruby');
+                b.classList.add('btn-outline-ruby');
+            });
+            btn.classList.remove('btn-outline-ruby');
+            btn.classList.add('btn-ruby');
 
-    <!-- 4 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Chief Financial Officer</span>
-            <h3 class="h5 fw-semibold">Tywin Lannister</h3>
-            <p class="text-secondary small mb-0">Oversees capital discipline, long-term M&A strategy, and corporate governance.</p>
-        </div>
-    </div>
-
-    <!-- 5 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">VP of Corporate Strategy</span>
-            <h3 class="h5 fw-semibold">Cersei Lannister</h3>
-            <p class="text-secondary small mb-0">Directs competitive positioning, executive board relations, and high-stakes enterprise negotiations.</p>
-        </div>
-    </div>
-
-    <!-- 6 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Chief Security Officer</span>
-            <h3 class="h5 fw-semibold">Jaime Lannister</h3>
-            <p class="text-secondary small mb-0">Commands physical and perimeter security operations, executive protection, and rapid incident response.</p>
-        </div>
-    </div>
-
-    <!-- 7 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Chief Ethics & Governance Officer</span>
-            <h3 class="h5 fw-semibold">Eddard Stark</h3>
-            <p class="text-secondary small mb-0">Enforces strict compliance standards, internal accountability, and zero-compromise audit integrity.</p>
-        </div>
-    </div>
-
-    <!-- 8 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Chief Technology & Research Officer</span>
-            <h3 class="h5 fw-semibold">Samwell Tarly</h3>
-            <p class="text-secondary small mb-0">Heads R&D knowledge bases, archival data systems, and technical documentation standards.</p>
-        </div>
-    </div>
-
-    <!-- 9 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">VP of Infrastructure Defense</span>
-            <h3 class="h5 fw-semibold">Barristan Selmy</h3>
-            <p class="text-secondary small mb-0">Mentors senior security engineers and maintains veteran operational reliability across core clusters.</p>
-        </div>
-    </div>
-
-    <!-- 10 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Director of Site Reliability</span>
-            <h3 class="h5 fw-semibold">Sandor Clegane</h3>
-            <p class="text-secondary small mb-0">Eliminates production bottlenecks and keeps mission-critical servers alive under extreme load.</p>
-        </div>
-    </div>
-
-    <!-- 11 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">VP of Threat Intelligence</span>
-            <h3 class="h5 fw-semibold">Varys</h3>
-            <p class="text-secondary small mb-0">Manages global telemetry networks, early-warning risk detection, and external market intelligence.</p>
-        </div>
-    </div>
-
-    <!-- 12 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">VP of Business Development</span>
-            <h3 class="h5 fw-semibold">Petyr Baelish</h3>
-            <p class="text-secondary small mb-0">Structures complex commercial deals, strategic alliances, and high-margin revenue channels.</p>
-        </div>
-    </div>
-
-    <!-- 13 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">VP of Penetration Testing</span>
-            <h3 class="h5 fw-semibold">Arya Stark</h3>
-            <p class="text-secondary small mb-0">Leads red-team offensive security audits and zero-day vulnerability hunting across internal APIs.</p>
-        </div>
-    </div>
-
-    <!-- 14 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">VP of Regional Operations</span>
-            <h3 class="h5 fw-semibold">Sansa Stark</h3>
-            <p class="text-secondary small mb-0">Oversees regional office logistics, supply chain continuity, and stakeholder coordination.</p>
-        </div>
-    </div>
-
-    <!-- 15 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">VP of Global Delivery</span>
-            <h3 class="h5 fw-semibold">Jorah Mormont</h3>
-            <p class="text-secondary small mb-0">Coordinates international client deployments and cross-border engineering field teams.</p>
-        </div>
-    </div>
-
-    <!-- 16 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Director of Strategic Analytics</span>
-            <h3 class="h5 fw-semibold">Davos Seaworth</h3>
-            <p class="text-secondary small mb-0">Provides pragmatic operational forecasting, logistics routing, and candid executive advisory.</p>
-        </div>
-    </div>
-
-    <!-- 17 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Director of Field Engineering</span>
-            <h3 class="h5 fw-semibold">Brienne of Tarth</h3>
-            <p class="text-secondary small mb-0">Ensures SLA commitments are fulfilled to the letter across high-priority enterprise accounts.</p>
-        </div>
-    </div>
-
-    <!-- 18 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Director of Compliance & Risk</span>
-            <h3 class="h5 fw-semibold">Stannis Baratheon</h3>
-            <p class="text-secondary small mb-0">Enforces strict regulatory adherence, release checklists, and zero-tolerance policy audits.</p>
-        </div>
-    </div>
-</div>
-
-<div class="mb-3">
-    <h2 class="h5 fw-semibold text-uppercase text-secondary mb-3">Engineering, Product, Legal & Operations Division</h2>
-</div>
-
-<div class="row g-4">
-    <!-- 19 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Principal Systems Chemist & Architect</span>
-            <h3 class="h5 fw-semibold">Walter White</h3>
-            <p class="text-secondary small mb-0">Designs ultra-pure, 99.1% deterministic data processing pipelines and core algorithms.</p>
-        </div>
-    </div>
-
-    <!-- 20 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">General Counsel</span>
-            <h3 class="h5 fw-semibold">Saul Goodman</h3>
-            <p class="text-secondary small mb-0">Handles creative contract structuring, regulatory loopholes, and rapid dispute resolution.</p>
-        </div>
-    </div>
-
-    <!-- 21 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Head of Corporate Security</span>
-            <h3 class="h5 fw-semibold">Mike Ehrmantraut</h3>
-            <p class="text-secondary small mb-0">Runs background vetting, operational cleanups, and no-nonsense risk mitigation.</p>
-        </div>
-    </div>
-
-    <!-- 22 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Director of Supply Chain</span>
-            <h3 class="h5 fw-semibold">Gustavo Fring</h3>
-            <p class="text-secondary small mb-0">Maintains spotless distribution logistics, vendor discipline, and seamless operational cover.</p>
-        </div>
-    </div>
-
-    <!-- 23 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Lead Root-Cause Investigator</span>
-            <h3 class="h5 fw-semibold">Sherlock Holmes</h3>
-            <p class="text-secondary small mb-0">Solves impossible production bugs and distributed system anomalies from minimal log traces.</p>
-        </div>
-    </div>
-
-    <!-- 24 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Technical Incident Coordinator</span>
-            <h3 class="h5 fw-semibold">John Watson</h3>
-            <p class="text-secondary small mb-0">Documents post-mortems, coordinates emergency war rooms, and keeps diagnostics grounded.</p>
-        </div>
-    </div>
-
-    <!-- 25 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Head of Acquisitions & Expansion</span>
-            <h3 class="h5 fw-semibold">Thomas Shelby</h3>
-            <p class="text-secondary small mb-0">Executes high-stakes expansion plans, strategic takeovers, and long-horizon market moves.</p>
-        </div>
-    </div>
-
-    <!-- 26 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Lead Diagnostics Architect</span>
-            <h3 class="h5 fw-semibold">Gregory House</h3>
-            <p class="text-secondary small mb-0">Diagnoses rare multi-service failures when standard monitoring insists everything is fine.</p>
-        </div>
-    </div>
-
-    <!-- 27 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Principal Cybersecurity Engineer</span>
-            <h3 class="h5 fw-semibold">Elliot Alderson</h3>
-            <p class="text-secondary small mb-0">Hardens kernel security, audits encryption layers, and monitors network intrusion vectors.</p>
-        </div>
-    </div>
-
-    <!-- 28 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Senior Distributed Systems Theorist</span>
-            <h3 class="h5 fw-semibold">Sheldon Cooper</h3>
-            <p class="text-secondary small mb-0">Optimizes theoretical throughput, formal specifications, and strict engineering protocols.</p>
-        </div>
-    </div>
-
-    <!-- 29 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Regional Branch Manager</span>
-            <h3 class="h5 fw-semibold">Michael Scott</h3>
-            <p class="text-secondary small mb-0">Boosts team morale through unorthodox all-hands meetings and relentless client enthusiasm.</p>
-        </div>
-    </div>
-
-    <!-- 30 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Assistant to the Regional Manager</span>
-            <h3 class="h5 fw-semibold">Dwight Schrute</h3>
-            <p class="text-secondary small mb-0">Enforces office readiness drills, asset tracking, and maximum productivity quotas.</p>
-        </div>
-    </div>
-
-    <!-- 31 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Enterprise Account Strategist</span>
-            <h3 class="h5 fw-semibold">Harvey Specter</h3>
-            <p class="text-secondary small mb-0">Closes flagship enterprise contracts before competitors even schedule discovery calls.</p>
-        </div>
-    </div>
-
-    <!-- 32 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Principal Documentation & IP Analyst</span>
-            <h3 class="h5 fw-semibold">Mike Ross</h3>
-            <p class="text-secondary small mb-0">Retains complete recall of every API spec, patent filing, and legacy codebase commit.</p>
-        </div>
-    </div>
-
-    <!-- 33 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Director of Executive Operations</span>
-            <h3 class="h5 fw-semibold">Tony Soprano</h3>
-            <p class="text-secondary small mb-0">Resolves vendor bottlenecks and keeps regional waste-management infrastructure running smoothly.</p>
-        </div>
-    </div>
-
-    <!-- 34 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Senior Forensic Data Analyst</span>
-            <h3 class="h5 fw-semibold">Dexter Morgan</h3>
-            <p class="text-secondary small mb-0">Isolates corrupted data records and traces anomalous patterns with surgical precision.</p>
-        </div>
-    </div>
-
-    <!-- 35 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Senior Legacy Incident Specialist</span>
-            <h3 class="h5 fw-semibold">Geralt of Rivia</h3>
-            <p class="text-secondary small mb-0">Hunts down monstrous legacy monolith bugs that standard engineering teams refuse to touch.</p>
-        </div>
-    </div>
-
-    <!-- 36 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Principal AI & Magic-Systems Engineer</span>
-            <h3 class="h5 fw-semibold">Yennefer of Vengerberg</h3>
-            <p class="text-secondary small mb-0">Builds high-output inference pipelines and transforms raw compute into production capabilities.</p>
-        </div>
-    </div>
-
-    <!-- 37 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Lead Edge Deployment Specialist</span>
-            <h3 class="h5 fw-semibold">Din Djarin</h3>
-            <p class="text-secondary small mb-0">Delivers mission-critical hardware nodes to remote environments with zero deviation from protocol.</p>
-        </div>
-    </div>
-
-    <!-- 38 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Senior Systems & Hardware Engineer</span>
-            <h3 class="h5 fw-semibold">Tony Stark</h3>
-            <p class="text-secondary small mb-0">Prototypes custom silicon accelerators, autonomous defense tooling, and next-gen UIs.</p>
-        </div>
-    </div>
-
-    <!-- 39 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Director of Counter-Threat Ops</span>
-            <h3 class="h5 fw-semibold">Billy Butcher</h3>
-            <p class="text-secondary small mb-0">Audits over-privileged internal services and keeps rogue subsystems in check.</p>
-        </div>
-    </div>
-
-    <!-- 40 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Principal Quantitative Analyst</span>
-            <h3 class="h5 fw-semibold">Chandler Bing</h3>
-            <p class="text-secondary small mb-0">Manages statistical reconfiguration and data-driven business metrics across quarterly reports.</p>
-        </div>
-    </div>
-
-    <!-- 41 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Head of Media & Board Relations</span>
-            <h3 class="h5 fw-semibold">Logan Roy</h3>
-            <p class="text-secondary small mb-0">Steers high-level media conglomerates, investor narratives, and decisive executive pivots.</p>
-        </div>
-    </div>
-
-    <!-- 42 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Lead Data Telemetry Investigator</span>
-            <h3 class="h5 fw-semibold">Fox Mulder</h3>
-            <p class="text-secondary small mb-0">Investigates unexplained network traffic spikes and edge-case anomalies hidden in deep logs.</p>
-        </div>
-    </div>
-
-    <!-- 43 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Principal Validation & QA Lead</span>
-            <h3 class="h5 fw-semibold">Dana Scully</h3>
-            <p class="text-secondary small mb-0">Applies rigorous scientific verification and reproducible benchmarking to every release.</p>
-        </div>
-    </div>
-
-    <!-- 44 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Senior Full-Stack Engineer</span>
-            <h3 class="h5 fw-semibold">Jesse Pinkman</h3>
-            <p class="text-secondary small mb-0">Scales high-throughput execution pipelines and ships rapid frontend prototypes on demand.</p>
-        </div>
-    </div>
-
-    <!-- 45 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Lead Product Operations Manager</span>
-            <h3 class="h5 fw-semibold">Kim Wexler</h3>
-            <p class="text-secondary small mb-0">Aligns product delivery milestones, compliance reviews, and cross-functional execution.</p>
-        </div>
-    </div>
-
-    <!-- 46 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Director of Field Resilience</span>
-            <h3 class="h5 fw-semibold">Joel Miller</h3>
-            <p class="text-secondary small mb-0">Maintains critical infrastructure under harsh conditions and leads disaster-recovery migrations.</p>
-        </div>
-    </div>
-
-    <!-- 47 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Senior Frontend & Product Designer</span>
-            <h3 class="h5 fw-semibold">Wednesday Addams</h3>
-            <p class="text-secondary small mb-0">Crafts dark-mode user interfaces, sharp typography, and zero-fluff user experiences.</p>
-        </div>
-    </div>
-
-    <!-- 48 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">VP of People & Team Culture</span>
-            <h3 class="h5 fw-semibold">Ted Lasso</h3>
-            <p class="text-secondary small mb-0">Builds high-trust engineering teams, onboarding mentorship, and resilient team morale.</p>
-        </div>
-    </div>
-
-    <!-- 49 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Principal Anomaly & Chaos Engineer</span>
-            <h3 class="h5 fw-semibold">Eleven</h3>
-            <p class="text-secondary small mb-0">Stress-tests cross-dimension network boundaries and isolates catastrophic memory leaks.</p>
-        </div>
-    </div>
-
-    <!-- 50 -->
-    <div class="col-md-6 col-lg-4">
-        <div class="ruby-card p-4 h-100">
-            <span class="badge badge-ruby mb-3">Director of Global Expansion</span>
-            <h3 class="h5 fw-semibold">Ragnar Lothbrok</h3>
-            <p class="text-secondary small mb-0">Pioneers uncharted cloud regions and leads high-velocity engineering expeditions.</p>
-        </div>
-    </div>
-</div>
+            const execBlock = document.getElementById('roster-exec');
+            const divBlock = document.getElementById('roster-division');
+            execBlock.classList.toggle('d-none', target === 'division');
+            divBlock.classList.toggle('d-none', target === 'exec');
+        });
+    });
+</script>
 {% endblock %}
+

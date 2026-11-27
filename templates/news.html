@@ -3,141 +3,276 @@
 {% block title %}News — Vanguard Systems{% endblock %}
 
 {% block content %}
-<div class="mb-4">
-    <div class="section-kicker mb-1">Feed</div>
-    <h1 class="h2 fw-bold">Tech, Gaming, Cinema & Series News</h1>
-    <p class="text-secondary mb-0">Verified release dates and major announcements across IT, games, movies, and TV.</p>
-</div>
+    <style>
+        .news-card {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            padding: 0 !important;
+            min-height: 460px;
+        }
 
-<div class="row g-4">
-    <div class="col-md-6">
-        <article class="ruby-card p-4 h-100">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="badge badge-ruby">Series</span>
-                <span class="text-secondary small">Nov 22, 2026</span>
-            </div>
-            <h2 class="h5 fw-semibold">HBO Confirms Harry Potter Series Christmas Premiere</h2>
-            <p class="text-secondary small mb-0">
-                On November 22, 2026, Warner Bros. Discovery officially confirmed that the first episode of the new Harry Potter TV adaptation will premiere on December 25, 2026.
-            </p>
-        </article>
+        .news-thumb-wrap {
+            position: relative;
+            height: 550px;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(251, 113, 133, 0.2);
+            background: #0d1017;
+        }
+
+        .news-thumb {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .news-card:hover .news-thumb {
+            transform: scale(1.04);
+        }
+
+        .news-body {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto;
+            padding: 1.35rem;
+        }
+    </style>
+
+    <div class="mb-4">
+        <div class="section-kicker mb-1">Feed</div>
+        <h1 class="h2 fw-bold">Tech, Gaming, Cinema & Series News</h1>
+        <p class="text-secondary mb-0">Verified release dates and major announcements across IT, games, movies, and
+            TV.</p>
     </div>
 
-    <div class="col-md-6">
-        <article class="ruby-card p-4 h-100">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="badge badge-ruby">Gaming</span>
-                <span class="text-secondary small">Nov 19, 2026</span>
-            </div>
-            <h2 class="h5 fw-semibold">Grand Theft Auto VI Officially Releases Worldwide</h2>
-            <p class="text-secondary small mb-0">
-                Rockstar Games launched GTA VI on November 19, 2026, ending a 13-year wait with midnight unlocks across PlayStation 5 and Xbox Series X/S.
-            </p>
-        </article>
+    <div class="d-flex flex-wrap gap-2 mb-4" id="news-subnav">
+        <button type="button" class="btn btn-sm btn-ruby" data-filter="all">All (10)</button>
+        <button type="button" class="btn btn-sm btn-outline-ruby" data-filter="Gaming">Gaming</button>
+        <button type="button" class="btn btn-sm btn-outline-ruby" data-filter="Series">Series</button>
+        <button type="button" class="btn btn-sm btn-outline-ruby" data-filter="Cinema">Cinema</button>
+        <button type="button" class="btn btn-sm btn-outline-ruby" data-filter="IT & AI">IT & AI</button>
     </div>
 
-    <div class="col-md-6">
-        <article class="ruby-card p-4 h-100">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="badge badge-ruby">Gaming</span>
-                <span class="text-secondary small">Aug 24, 2026</span>
-            </div>
-            <h2 class="h5 fw-semibold">CD Projekt Red Confirms The Witcher 4 for 2028</h2>
-            <p class="text-secondary small mb-0">
-                During its official Gamescom 2026 update on August 24, 2026, CD Projekt Red announced that The Witcher 4 is targeting a 2028 release window.
-            </p>
-        </article>
+    <div class="row g-4" id="news-grid">
+        <div class="col-md-6 col-lg-4 news-item" data-category="Series">
+            <article class="ruby-card news-card h-100">
+                <div class="news-thumb-wrap">
+                    <img src="https://preview.redd.it/official-poster-for-harry-potter-and-the-philosophers-stone-v0-1n9yxqu0neyh1.jpeg?width=640&crop=smart&auto=webp&s=2e80dd0b52b20ab6dc9d162dd4a11e8c7fa557f3"
+                         alt="Harry Potter Series" class="news-thumb">
+                </div>
+                <div class="news-body">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge badge-ruby">Series</span>
+                        <span class="text-secondary small">Nov 22, 2026</span>
+                    </div>
+                    <h2 class="h5 fw-semibold mb-2">HBO Confirms Harry Potter Series Christmas Premiere</h2>
+                    <p class="text-secondary small mb-0">
+                        On November 22, 2026, Warner Bros. Discovery officially confirmed that the first episode of the
+                        new Harry Potter TV adaptation will premiere on December 25, 2026.
+                    </p>
+                </div>
+            </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 news-item" data-category="Gaming">
+            <article class="ruby-card news-card h-100">
+                <div class="news-thumb-wrap">
+                    <img src="https://m.media-amazon.com/images/M/MV5BYjEyZWNiOTQtYjRkOC00MWU5LWJmNTUtYTBiOWQzYjQyMTE5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+                         alt="Grand Theft Auto VI" class="news-thumb">
+                </div>
+                <div class="news-body">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge badge-ruby">Gaming</span>
+                        <span class="text-secondary small">Nov 19, 2026</span>
+                    </div>
+                    <h2 class="h5 fw-semibold mb-2">Grand Theft Auto VI Officially Releases Worldwide</h2>
+                    <p class="text-secondary small mb-0">
+                        Rockstar Games launched GTA VI on November 19, 2026, ending a 13-year wait with midnight unlocks
+                        across PlayStation 5 and Xbox Series X/S.
+                    </p>
+                </div>
+            </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 news-item" data-category="Gaming">
+            <article class="ruby-card news-card h-100">
+                <div class="news-thumb-wrap">
+                    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202609/1711/d851895118a16d07706b91e7b69b53ce27531269cad5e968.png"
+                         alt="The Witcher 3 Remaster" class="news-thumb">
+                </div>
+                <div class="news-body">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge badge-ruby">Gaming</span>
+                        <span class="text-secondary small">Sep 29, 2026</span>
+                    </div>
+                    <h2 class="h5 fw-semibold mb-2">The Witcher 3 Remaster Launches in Late September</h2>
+                    <p class="text-secondary small mb-0">
+                        The remastered edition of The Witcher 3: Wild Hunt arrived at the end of September 2026 with
+                        upgraded visuals, sharper textures, and modern performance enhancements.
+                    </p>
+                </div>
+            </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 news-item" data-category="Cinema">
+            <article class="ruby-card news-card h-100">
+                <div class="news-thumb-wrap">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZBS6d7oo_8I5nNboCnSybvUwBwIASlWm7wQzBjWCU3tGo-t8xaxh-_Yk&s=10"
+                         alt="Spider-Man Brand New Day" class="news-thumb">
+                </div>
+                <div class="news-body">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge badge-ruby">Cinema</span>
+                        <span class="text-secondary small">Jul 31, 2026</span>
+                    </div>
+                    <h2 class="h5 fw-semibold mb-2">Spider-Man: Brand New Day Hits US Theaters</h2>
+                    <p class="text-secondary small mb-0">
+                        Marvel Studios and Sony released Spider-Man: Brand New Day in US cinemas on July 31, 2026,
+                        kicking off a new chapter for Tom Holland's Peter Parker.
+                    </p>
+                </div>
+            </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 news-item" data-category="Series">
+            <article class="ruby-card news-card h-100">
+                <div class="news-thumb-wrap">
+                    <img src="https://preview.redd.it/new-poster-for-house-of-the-dragon-season-3-v0-ug1xavlvrjzg1.jpeg?width=1080&crop=smart&auto=webp&s=db830bc58013584f1d420d6e8cbe023d776ccef6"
+                         alt="House of the Dragon Season 3" class="news-thumb">
+                </div>
+                <div class="news-body">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge badge-ruby">Series</span>
+                        <span class="text-secondary small">Jun 21, 2026</span>
+                    </div>
+                    <h2 class="h5 fw-semibold mb-2">House of the Dragon Season 3 Premieres on HBO</h2>
+                    <p class="text-secondary small mb-0">
+                        The third season of House of the Dragon debuted on June 21, 2026, with its opening episode "Salt
+                        and Sea, Fire and Blood" escalating the Targaryen civil war.
+                    </p>
+                </div>
+            </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 news-item" data-category="Cinema">
+            <article class="ruby-card news-card h-100">
+                <div class="news-thumb-wrap">
+                    <img src="https://images.squarespace-cdn.com/content/v1/56047552e4b00047c4e83900/dd1fe3ff-1359-4917-ae71-2ba904864581/The+Mandalorian+and+Grogu+Poster.jpg"
+                         alt="Star Wars The Mandalorian and Grogu" class="news-thumb">
+                </div>
+                <div class="news-body">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge badge-ruby">Cinema</span>
+                        <span class="text-secondary small">May 22, 2026</span>
+                    </div>
+                    <h2 class="h5 fw-semibold mb-2">Star Wars: The Mandalorian and Grogu Opens in Cinemas</h2>
+                    <p class="text-secondary small mb-0">
+                        Jon Favreau's big-screen Star Wars adventure arrived in US theaters on May 22, 2026, bringing
+                        Din Djarin and Grogu to IMAX screens.
+                    </p>
+                </div>
+            </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 news-item" data-category="IT & AI">
+            <article class="ruby-card news-card h-100">
+                <div class="news-thumb-wrap">
+                    <img src="https://assets.lovable.dev/content/news/covers/claudeopus4.7.png" alt="Claude Opus 4.7"
+                         class="news-thumb">
+                </div>
+                <div class="news-body">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge badge-ruby">IT & AI</span>
+                        <span class="text-secondary small">Apr 16, 2026</span>
+                    </div>
+                    <h2 class="h5 fw-semibold mb-2">Anthropic Launches Claude Opus 4.7 for Agent Workflows</h2>
+                    <p class="text-secondary small mb-0">
+                        Released on April 16, 2026, Claude Opus 4.7 introduced stronger multi-step reasoning and
+                        long-running coding agent capabilities.
+                    </p>
+                </div>
+            </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 news-item" data-category="Gaming">
+            <article class="ruby-card news-card h-100">
+                <div class="news-thumb-wrap">
+                    <img src="https://www.deepsilver.com/media/qw4a1aj4/m39.jpg?width=800&v=1dcf696dded8390"
+                         alt="Metro 2039" class="news-thumb">
+                </div>
+                <div class="news-body">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge badge-ruby">Gaming</span>
+                        <span class="text-secondary small">Apr 13, 2026</span>
+                    </div>
+                    <h2 class="h5 fw-semibold mb-2">4A Games Officially Announces Metro 2039</h2>
+                    <p class="text-secondary small mb-0">
+                        On April 13, 2026, 4A Games announced Metro 2039 as the direct sequel to Metro Exodus, followed
+                        by its first gameplay reveal on April 16 and a February 4, 2027 release target.
+                    </p>
+                </div>
+            </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 news-item" data-category="Series">
+            <article class="ruby-card news-card h-100">
+                <div class="news-thumb-wrap">
+                    <img src="https://preview.redd.it/new-poster-for-a-knight-of-the-seven-kingdoms-v0-rcbtlo5k8u4g1.jpeg?auto=webp&s=416dcb6d847b4d8bc5609bc06d0af20dc04d7376"
+                         alt="A Knight of the Seven Kingdoms" class="news-thumb">
+                </div>
+                <div class="news-body">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge badge-ruby">Series</span>
+                        <span class="text-secondary small">Jan 18, 2026</span>
+                    </div>
+                    <h2 class="h5 fw-semibold mb-2">A Knight of the Seven Kingdoms Debuts on HBO</h2>
+                    <p class="text-secondary small mb-0">
+                        The Game of Thrones prequel following Dunk and Egg premiered on January 18, 2026, with the
+                        episode "The Hedge Knight".
+                    </p>
+                </div>
+            </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 news-item" data-category="Cinema">
+            <article class="ruby-card news-card h-100">
+                <div class="news-thumb-wrap">
+                    <img src="https://static0.moviewebimages.com/wordpress/wp-content/uploads/sharedimages/2026/08/avengers-doomsday-poster.jpg?q=49&fit=contain&w=480&dpr=2"
+                         alt="Avengers Doomsday" class="news-thumb">
+                </div>
+                <div class="news-body">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge badge-ruby">Cinema</span>
+                        <span class="text-secondary small">Dec 18, 2026 (Upcoming)</span>
+                    </div>
+                    <h2 class="h5 fw-semibold mb-2">Avengers: Doomsday Set for December 18 Theatrical Release</h2>
+                    <p class="text-secondary small mb-0">
+                        Directed by the Russo brothers and starring Robert Downey Jr. as Doctor Doom, Marvel's Avengers:
+                        Doomsday arrives in US theaters on December 18, 2026.
+                    </p>
+                </div>
+            </article>
+        </div>
     </div>
 
-    <div class="col-md-6">
-        <article class="ruby-card p-4 h-100">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="badge badge-ruby">Cinema</span>
-                <span class="text-secondary small">Jul 31, 2026</span>
-            </div>
-            <h2 class="h5 fw-semibold">Spider-Man: Brand New Day Hits US Theaters</h2>
-            <p class="text-secondary small mb-0">
-                Marvel Studios and Sony released Spider-Man: Brand New Day in US cinemas on July 31, 2026, kicking off a new chapter for Tom Holland's Peter Parker.
-            </p>
-        </article>
-    </div>
+    <script>
+        document.querySelectorAll('#news-subnav button').forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const filter = btn.dataset.filter;
+                document.querySelectorAll('#news-subnav button').forEach((b) => {
+                    b.classList.remove('btn-ruby');
+                    b.classList.add('btn-outline-ruby');
+                });
+                btn.classList.remove('btn-outline-ruby');
+                btn.classList.add('btn-ruby');
 
-    <div class="col-md-6">
-        <article class="ruby-card p-4 h-100">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="badge badge-ruby">Series</span>
-                <span class="text-secondary small">Jun 21, 2026</span>
-            </div>
-            <h2 class="h5 fw-semibold">House of the Dragon Season 3 Premieres on HBO</h2>
-            <p class="text-secondary small mb-0">
-                The third season of House of the Dragon debuted on June 21, 2026, with its opening episode "Salt and Sea, Fire and Blood" escalating the Targaryen civil war.
-            </p>
-        </article>
-    </div>
-
-    <div class="col-md-6">
-        <article class="ruby-card p-4 h-100">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="badge badge-ruby">Cinema</span>
-                <span class="text-secondary small">May 22, 2026</span>
-            </div>
-            <h2 class="h5 fw-semibold">Star Wars: The Mandalorian and Grogu Opens in Cinemas</h2>
-            <p class="text-secondary small mb-0">
-                Jon Favreau's big-screen Star Wars adventure arrived in US theaters on May 22, 2026, bringing Din Djarin and Grogu to IMAX screens.
-            </p>
-        </article>
-    </div>
-
-    <div class="col-md-6">
-        <article class="ruby-card p-4 h-100">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="badge badge-ruby">IT & AI</span>
-                <span class="text-secondary small">Apr 16, 2026</span>
-            </div>
-            <h2 class="h5 fw-semibold">Anthropic Launches Claude Opus 4.7 for Agent Workflows</h2>
-            <p class="text-secondary small mb-0">
-                Released on April 16, 2026, Claude Opus 4.7 introduced stronger multi-step reasoning and long-running coding agent capabilities.
-            </p>
-        </article>
-    </div>
-
-    <div class="col-md-6">
-        <article class="ruby-card p-4 h-100">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="badge badge-ruby">Gaming</span>
-                <span class="text-secondary small">Apr 13, 2026</span>
-            </div>
-            <h2 class="h5 fw-semibold">4A Games Officially Announces Metro 2039</h2>
-            <p class="text-secondary small mb-0">
-                On April 13, 2026, 4A Games announced Metro 2039 as the direct sequel to Metro Exodus, followed by its first gameplay reveal on April 16 and a February 4, 2027 release target.
-            </p>
-        </article>
-    </div>
-
-    <div class="col-md-6">
-        <article class="ruby-card p-4 h-100">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="badge badge-ruby">Series</span>
-                <span class="text-secondary small">Jan 18, 2026</span>
-            </div>
-            <h2 class="h5 fw-semibold">A Knight of the Seven Kingdoms Debuts on HBO</h2>
-            <p class="text-secondary small mb-0">
-                The Game of Thrones prequel following Dunk and Egg premiered on January 18, 2026, with the episode "The Hedge Knight".
-            </p>
-        </article>
-    </div>
-
-    <div class="col-md-6">
-        <article class="ruby-card p-4 h-100">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="badge badge-ruby">Cinema</span>
-                <span class="text-secondary small">Dec 18, 2026 (Upcoming)</span>
-            </div>
-            <h2 class="h5 fw-semibold">Avengers: Doomsday Set for December 18 Theatrical Release</h2>
-            <p class="text-secondary small mb-0">
-                Directed by the Russo brothers and starring Robert Downey Jr. as Doctor Doom, Marvel's Avengers: Doomsday arrives in US theaters on December 18, 2026.
-            </p>
-        </article>
-    </div>
-</div>
+                document.querySelectorAll('.news-item').forEach((card) => {
+                    const match = filter === 'all' || card.dataset.category === filter;
+                    card.classList.toggle('d-none', !match);
+                });
+            });
+        });
+    </script>
 {% endblock %}

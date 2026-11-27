@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}404 — Page Not Found | Vanguard Systems{% endblock %}
+
+{% block content %}
+<style>
+    .error-card {
+        background:
+            radial-gradient(circle at top right, rgba(225, 29, 72, 0.18), transparent 48%),
+            #11151f;
+    }
+    .error-code {
+        font-size: clamp(4rem, 10vw, 6.5rem);
+        line-height: 1;
+        font-weight: 800;
+        color: #fb7185;
+        text-shadow: 0 0 28px rgba(225, 29, 72, 0.35);
+    }
+</style>
+
+<section class="ruby-card error-card p-4 p-md-5 text-center my-3">
+    <div class="section-kicker mb-2">Error · Route Not Found</div>
+    <div class="error-code mb-3">404</div>
+    <h1 class="h2 fw-bold mb-2">This route does not exist</h1>
+    <p class="text-secondary mx-auto mb-4" style="max-width: 34rem;">
+        The requested section or endpoint was moved, never existed, or is outside the configured routes.
+    </p>
+
+    <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+        <a href="{% url 'home' %}" class="btn btn-ruby px-4 py-2">Back to Home</a>
+        <a href="{% url 'news' %}" class="btn btn-outline-ruby px-4 py-2">News</a>
+        <a href="{% url 'management' %}" class="btn btn-outline-ruby px-4 py-2">Management</a>
+        <a href="{% url 'about' %}" class="btn btn-outline-ruby px-4 py-2">About</a>
+        <a href="{% url 'contacts' %}" class="btn btn-outline-ruby px-4 py-2">Contacts</a>
+    </div>
+
+    <div class="text-secondary small">
+        Regional offices:
+        <a href="{% url 'contacts-us' %}" class="text-decoration-none mx-1" style="color: #fb7185;">United States</a> ·
+        <a href="{% url 'contacts-ca' %}" class="text-decoration-none mx-1" style="color: #fb7185;">Canada</a> ·
+        <a href="{% url 'contacts-au' %}" class="text-decoration-none mx-1" style="color: #fb7185;">Australia</a>
+    </div>
+</section>
+{% endblock %}

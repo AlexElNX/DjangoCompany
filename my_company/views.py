@@ -24,3 +24,7 @@ def contacts_ca(request, _=None):
 
 def contacts_au(request, _=None):
     return render(request, "contacts.html", {"country": "Australia"})
+
+
+def error_404_view(request, exception):
+    return render(request, '404.html')

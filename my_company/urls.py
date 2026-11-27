@@ -20,3 +20,5 @@ urlpatterns = [
     path('contacts/<path:_>/', views.contacts, name='contacts-catchall'),
     path('contact/<path:_>/', views.contacts, name='contact-alt-catchall'),
 ]
+
+handler404 = 'my_company.views.error_404_view'
